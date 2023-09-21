@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Décorateur</title>
+</head>
+<body>
+    <h1>Les Descripteurs</h1>
+
+        <p><strong>writable :</strong> il spécifie si la propriété peut être modifié après sa création. Si "writable" est "false", la propriété est considérée comme en lecteur seule </p>
+
+        <p><strong>enumerable :</strong> il indique si la propriété sera listée lors du parcours de l'objet à l'aide d'une boucle "for ... in" ou "Object.keys"</p>
+        <p><strong>configurable :</strong> il spécifie si la propriété peut être supprimée ultérieurement, et si ses descripteurs peuvent être modifiés</p>
+
+
+        <s>je suis  Délanno KOTCHO</s>
+        <i><em>initial-scale</em></i>
+    <script>
+        "use strict"
+
+        let u = { fname: "John", lname: "Doe", age: 23 };
+        Object.defineProperty(u, "fname",{
+            // configurable: false
+        });
+
+        u.fname = "Jonas"
+        // delete u.fname; // supprime la propriété "fname"
+        delete u.lname; // supprime la propriété "lname"
+        console.log(u);
+        
+
+
+
+
+        Object.defineProperty(u, "age", {
+            // writable: false,
+            enumerable: false, 
+        });
+
+        console.log("**** après changement ****");
+        u.age = 30; // write
+        for (const key in u) {
+            console.log(key);
+        }
+
+        console.log(u);
+    </script>
+</body>
+</html>

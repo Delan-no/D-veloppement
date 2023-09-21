@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle</title>
+</head>
+
+<body>
+  <div id="app">
+   
+    <p>{{ verifyAddress }}</p>
+    <button @click="increment">Count {{ counter }}</button>
+  </div>
+
+
+<script type="module">
+    import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.esm-browser.min.js'
+     
+    createApp({
+        data() {
+        return {
+            users: {
+                firstname: "Délanno",
+                address: {
+                    tel: "+229 94371002",
+                    email: "delan@ktc.com",
+                },
+            },
+            counter: 0
+          
+        }
+      },
+
+      methods:{
+        increment(){
+            this.counter++;
+        }
+      },
+      computed: {
+        verifyAddress(){
+            return this.users.address.email.endsWith("delan@ktc.com") ? `${this.users.address.email} est une addresse mail de Délanno` : ` ${this.users.address.email} n'est pas une addresse mail de Délanno`
+        },
+
+       
+      }
+    }).mount('#app')
+    </script>
+
+</body>
+
+</html>

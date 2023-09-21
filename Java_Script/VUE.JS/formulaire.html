@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <style>
+        /* form {
+            width: fit-content;
+        } */
+        body{
+           display: flex;
+           justify-content: center;
+        }
+
+        form input {
+            margin: .5rem;
+            padding: .3rem;
+            border-radius: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <form action="">
+            <fieldset>
+                <legend> Formulaire de validation </legend>
+                
+                <p>{{ lname }}</p>
+                <label for="">Nom :</label><br>
+                <input v-model="lname" name="lname" placeholder="Entrez votre nom"><br>
+                
+                <label for="">Prénom :</label> <br>
+                <input v-model="fname" name="fname" placeholder="Entrez votre prénom"><br>
+                
+                <label for="">Mot de passe</label><br>
+                <input v-model="password" placeholder="Entrez votre mot de passe"><br>
+                
+
+                <label> Votre message </label><br>
+                <div style="white-space: pre-line"> {{message}} </div>
+                <textarea v-model="message"  placeholder="Entrez votre message"></textarea> 
+
+                <h2>Checkbox</h2>
+                <!-- Checbox -->
+                <div>
+                    <input type="checkbox" id="checkbox" v-model="checked">
+                    <label for="checkbox"> {{ checked }}</label>
+                </div>
+
+                <h2>Multi Checkbox</h2>
+                <!-- Multi Checkbox -->
+                <div>Noms sélectionnés: {{ checkedNames }}</div>
+
+                <input type="checkbox" id="martin" value="Martin" v-model="checkedNames">
+                <label for="martin">Martin</label>
+
+                <input type="checkbox" id="delanno" value="Délanno" v-model="checkedNames">
+                <label for="delanno">Délanno</label>
+
+                <input type="checkbox" id="axel" value="Axel" v-model="checkedNames">
+                <label for="axel">Axel</label>
+
+                <input type="checkbox" id="nicole" value="Nicole" v-model="checkedNames">
+                <label for="nicole">Nicole</label>
+
+                <input type="checkbox" id="oswald" value="Oswald" v-model="checkedNames"> 
+                <label for="oswald">Oswald</label><br>
+
+                <input type="checkbox" id="osw" value="Faris" v-model="checkedNames"> 
+                <label for="osw">Faris</label>
+
+                <input type="checkbox" id="regis" value="Régis" v-model="checkedNames">
+                <label for="regis">Régis</label>
+
+                <input type="checkbox" id="warris" value="Warris" v-model="checkedNames">
+                <label for="warris">Warris</label>
+
+                <input type="checkbox" id="emile" value="Emile" v-model="checkedNames">
+                <label for="emile">Emile</label>
+
+                <input type="checkbox" id="gabriel" value="Gabriel" v-model="checkeNames">
+                <label for="gabriel">Gabriel</label>
+
+
+                <h2>Radio</h2>
+                <!-- Radio -->
+                <div>Choix: {{picked}}</div>
+
+                <input type="radio" id="un" value="Un" v-model="picked"/>
+                <label for="un">Un</label><br>
+                
+                <input type="radio" id="deux" value="Deux" v-model="picked"/>
+                <label for="deux">Deux</label> <br>
+
+                <input type="radio" id="de" value="Trois" v-model="picked"/>
+                <label for="de">Trois</label>
+
+                <h2>Select</h2>
+                <div>Selection: {{selected}}</div>
+                <select v-model="selected">
+                    <option dosabled value="">Selectionnez un élément svp</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                    <option value="d">D</option>
+                </select>
+
+                <!-- <button type="submit">Envoyez</button> -->
+            </fieldset>
+        </form>
+
+        <p>{{ lname }}</p>
+        <p>{{ fname }}</p>
+        <p>{{ password }}</p>
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+
+
+</body>
+
+</html>

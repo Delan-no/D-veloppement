@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+article{
+    margin-block: 2rem;
+}
+.ball{
+    position: relative;
+    width: 45px;
+    aspect-ratio: 1;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.ball1{
+    background-color: #f0f;
+}
+.ball2{
+    background-color: #f00;
+}
+.ball3{
+    background-color: #00f;
+}
+.ball4{
+    background-color: blueviolet;
+}
+.ball5{
+    background-color: rgb(132, 255, 0);
+}

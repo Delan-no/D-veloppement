@@ -1,0 +1,158 @@
+
+logo high five
+Quiz
+Open user menu
+D�lanno_Kotcho
+
+Quiz_PHP4
+
+1. En Laravel, � quoi sert la directive @include ?
+Elle permet d'inclure une vue dans une autre vue
+Elle instancie une classe dans une vue
+Elle ajoute un nouveau champs dans les migrations
+Elle n'existe pas en Laravel
+
+2. En Laravel, dans quel dossier se trouve les routes ?
+router
+routes
+web.php
+api.php
+
+3. En Laravel, que peut-on utiliser au lieur de var_dump ou die
+dump()
+vd()
+dd()
+dump_die()
+
+4. En Laravel, imaginons un contr�leur, et dans lequel nous consid�rons l'action suivante:
+
+use App\Models\User;
+
+public function store(Request $request) {
+ $user = User::find(1);
+ $request['user_id'] = $user->id;
+
+ $this->validate($request, [
+  'title' => 'required | string',
+  'body' => 'required | string',
+  'user_id' => 'required | numeric | exists:users, id';
+ ]);
+
+ $art = Article::create($request->all());
+}
+
+Que se passe-t-il lorsqu'un formulaire est soumis et valide ?
+On affiche � nouveau le formulaire
+On enr�gistre le nouvel article en base de donn�es
+On enr�gistre le nouvel article en base de donn�es et on redigige l'utilisateur vers la page associ�e audit article
+On enr�gistre le nouvel article en base de donn�es et on redirige l'utilisateur vers la page d'accueil
+
+5. En Laravel, quel est le r�le de Blade ?
+G�n�rer du HTML de fa�on plus maintenable et s�curis�e qu'en PHP pur
+Ex�cuter des suites de tests automatis�s
+Remplir des suites de donn�es avec de faux contenus � des fins de d�veloppement
+Automatiser certaines t�ches comme la compression des images ou la compilation du Sass en CSS
+
+6. En Laravel, qu'affiche le morceau de template suivant ?
+
+@extends('layouts.app')
+
+@section('body')
+ <ul>
+  @foreach (articles as article)
+   <li>
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.lede }}</p>
+   <li>
+  @endforeach
+ </ul>
+@endsection
+Une liste d'articles
+Le body HTML
+Le titre et le chapeau d'un article si celui-ci existe
+Une liste d'utilisateurs
+
+7. En Larave, dans quel dossier doit-on placer les assets finaux qui seront servis aux navigateurs (CSS, JS, images, etc.) ?
+/tests
+/public
+/vendor
+/var
+
+8. En Laravel, dans le cadre de l'utilisation de l'ORM Eloquent, quelle commande permet de g�n�rer la structure de la base de donn�es � partir des migrations ?
+php artisan make:migration
+php artisan make:migrate
+php artisan migration
+php artisan db:seed
+
+9. Laravel est un projet plus ancien que Symfony
+Vrai
+Faux
+
+10. Laravel n�cessite l'achat d'une licence afin de pouvoir �tre utilis� dans le cadre d'un projet commercial
+Vrai
+Faux
+
+11. En Larave, � quoi sert la directive @yield ?
+� afficher le contenu d'une section
+� �tendre un template
+� inclure un fichier
+Cette directive n'existe pas en Laravel
+
+12. En Laravel,quelle fonction est appell�e pour cr�er les champs "created_at" et "updated_at" dans une migration ?
+Schema::create('table', function (Blueprint $table) { $table->timestamps(); });
+Schema::create('table', function (Blueprint $table) { $table->date(); });
+Schema::create('table', function (Blueprint $table) { $table->timestamp(); });
+Schema::create('table', function (Blueprint $table) { $table->dateTime(); });
+
+13. Que sont les migrations Laravel ?
+Un ensemble de r�gles � suivre lors de la mise � jour de Laravel
+Une liste de commandes utilis�es pour installer les d�pendances PHP
+Ils sont similaires au control des versions pour la base de donn�es, permettant ainsi � une �quipe de d�finir et de partager le sch�ma de la BDD d'une application
+Laravel ne supporte pas les migrations
+
+14. En Laravel, qu'est ce que le "seeding" ?
+Le processus de d�veloppement d'une facade
+Le processus d'ajouter de fausses donn�es dans la BDD
+Une meilleure mani�re de communiquer avec le conteneur de services
+Le processus de r�cup�rer les migrations
+
+15. Quelles sont les m�thodes que contiennent une migration ?
+create() et delete()
+up() et down()
+make() et remove()
+execute() et destroy()
+
+16. � quoi sert un model en Laravel ?
+� impl�menter diff�rents widgets dans une application
+� am�liorer l'exp�rience utilisateur
+� envoyer et r�cup�rer les donn�es d'une table de la BDD
+� autog�n�rer les composants pour initier une application
+
+17. En Laravel, quel est le r�le de l'ORM Eloquent ?
+Servir d'interface entre les mod�les PHP et les tables en base de donn�es
+G�rer le routing de l'application
+G�n�rer des proxies dans le cadre de l'injection de d�pendances par autowiring
+Servir d'interface entre les formulaires PHP et leurs templates HTML
+
+18. Qu'est ce que Eloquent, et � quoi sert-il ?
+C'est un gestionnaire de d�pendance php
+C'est un mapping objet-relationnel utilis� pour interagir avec la BDD
+C'est une API utilis�e pour se connecter � la BDD
+C'est un simple moyen de s'authentifier
+
+19. Que signifie SQL ?
+Server Query Language
+Structured Query Language
+Simple Query Language
+Standard Query Language
+
+20. Que retourne: SELECT * FROM table LIMIT 10 OFFSET 5; ?
+Les enregistrements 6 � 15 d'une table
+Les enregistrements 1 � 10 d'une table
+Les enregistrements 0 � 9 d'une table
+Les enregistrements 5 � 10 d'une table
+Soumettre
+
+
+
+ Quel dessein servent les accesseurs et les mutateurs d'une classe ?

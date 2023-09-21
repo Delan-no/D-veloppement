@@ -1,0 +1,55 @@
+<?php require "generic_functions.php" ?>
+<?php require "robot_functions.php" ?>
+
+<?php
+ //if (empty($_POST)):
+ // else:
+ // endif;
+$robot;
+if (!empty($_POST['name'])) {
+    $robot = $_POST['name'];
+} else {
+    $robot = generateRandomRobotName();
+}
+
+?>
+
+<h1>Salut !</h1>
+
+<form method="POST">
+    <input type="text" name="name" placeholder="Entrez le nom du Robot (optionnel)" /> <br>
+    <div style="text-align: left;">
+        <p style="text-align: center;">votre robot est-il diabolique?</p>
+        <div> 
+            <input id="yes" type="radio" name="evilness" value="yes"> 
+            <label for="yes"> Oui </label> </div>
+        <div> 
+            <input id="no" type="radio" name="evilness" value="no"> 
+            <label for="no"> Non</label> </div>
+        <div> 
+            <input id="maybe" type="radio" name="evilness" value="maybe"> 
+            <label for="maybe"> Croisons les doigts !</label> </div>
+    </div>
+    <input type="text" name="apropos" placeholder="Entrez ce que vous pensez du robot" /> <br>
+    <button type="submit" name="submit">Valider</button>
+</form>
+
+<div class="com">
+    <h2>
+        <?= greet($robot); ?>
+    </h2>
+    <h2>
+        <?= getCurrentDataTime(); ?>
+    </h2>
+    <h2>
+        <?= reverseName($robot); ?>
+    </h2>
+    <h2>
+        <?= robotBehavior(); ?>
+    </h2>
+    <h2>
+        <?= chooseRandomNumberAndParity(); ?>
+    </h2>
+</div>
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau</title>
+</head>
+<body>
+    <script>
+         table = [5 , 12 , 10 , 20]
+/*         
+         table.forEach(function (tableau) {
+             console.log(tableau **2)
+         });
+*/
+         let tmpForEach = [];
+         table.forEach(function (element, index) {
+            tmpForEach[index] = element **2;
+         })
+         console.log(tmpForEach)
+/*
+        let tab = table => {
+            let temArray = [] ;
+            for (let i = 0; i < table.length; i++) {
+                temArray =  table[i] **2;             
+            }
+            return temArray;
+        }
+        console.log(tab(table))
+        console.log(tab(table))
+        console.log(tab(table))
+
+        let tableau1 = [2, 4, 7];
+        tableau1[0] = 10
+        tableau1[1] = 100
+        tableau1[2] = 1000
+        console.log(tableau1);
+    
+
+            let phrase = point =>{
+                let mot = point + " ?";
+                return mot;
+            }
+        console.log(phrase("comment vas tu"))
+
+*/
+table[2, 4 , 5 , 10]
+function square (table){
+    let tmp = [];
+    for(let i = 0; i < table.length ; i++){
+        tmp.push(table[i]*2);
+        
+    }
+    return tmp
+}
+console.log(square([2, 3]));
+
+    
+    </script>
+</body>
+</html>

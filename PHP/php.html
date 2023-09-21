@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>php</title>
+</head>
+<body>
+    <h1>php</h1>
+    <p><strong><em>Définition :</em></strong> est un langage de script serveur et un outil puissant pour créer des pages web dynamiques et interactives. </p>
+
+
+    <h2>Les variables</h2>
+    <pre>
+        <h3>declaration</h3>
+        <p>En php, toutes les variables commmencent par un "$". Toute déclaration php, se termine toujours par un point-virgule
+    <em>Exemple:</em>
+        $user="John";
+        $num = 2</p>
+    </pre>
+    <h3>Convention</h3>
+    <p>la convention de nommage des variables est la suivante :</p>
+    <p>
+        1- Toutes les variables commencent forcément par un dollar <br>
+        2- Le nom d'une variable doit être composé uniquement de charactères alpha-numérique et du tiret de 8(_) <br>
+        3- Le nom d'une variable ne doit pas commencer par un chiffre
+    </p>
+    
+
+    <h3>Les types de variable</h3>
+    <p> En php le type d'une variable lui est assigné quand vous lui donnez une valeur. On utilise la fonction ` var_dump()` pour avoir les informations, concernant le type d'une variable.</p>
+    <pre>
+    Exemple:
+        $user;
+        var_dump($user)
+    </pre>
+    <h4>String</h4>
+    <p>réprésente les chaînes de caractère. il se déclare avec soit un guillemet double("") ou un guillemet simple(''). <br>
+    La concaténation de deux chaines de caractères se fait avec un point (.)
+    </p>
+    <pre>
+        $fname = "John";
+        $lname = "Doe";
+          echo $fname . " " . $lname; // John Doe
+    </pre>
+
+    <h4>Number</h4>
+    <p>répresente tous les nombres; entiers comme à virgules. on en distingue deux séparations: <br> 
+    1 - int: désignant les nombres entiers <br>
+    2 - float: désignant les nombres flottants (nombres décimaux)</p>
+    <pre>
+        $num1 = 3;
+        $moyenne = 18.5;
+          var_dump($num1); // int
+          var_dump($moyenne); // float
+    </pre>
+
+    <h4>Boolean</h4>
+    <p>répresente les valeurs de vérités; soit "true" soit "false";</p>
+    <pre>
+        $isAdmin = true;
+        $isEven = false;
+          var_dump($isAdmin) ;// bool
+    </pre>
+
+    <h4>null</h4>
+    <p>répresente l'absence de valeurs</p>
+    <pre>
+        $data = null;
+          var_dump($data); // null
+    </pre>
+
+    <h4>Array</h4>
+    <p>répresente un tableau.</p>
+    <pre>
+        $fruits = array ("pomme", "orange", "banane");
+        $notes = [2, 15, 65];
+        $arr = ["hello", 2, true, null];
+
+          var_dump($fruits, $notes, $arr);
+          echo "<pre>";
+          print_r($fruits);
+          echo "</pre>";
+    </pre>
+
+    <h4>object</h4>
+    <p>représente un objec t. Pour créer un objet, il faut créer une classe, puis l'instancier.</p>
+    <pre>
+        class User {}
+        $u = new User();
+        $u2 = new User();
+         var_dump($u, $u2); // objet(User)#identifiant_unique (nombre_de_propriétés)
+    </pre>
+
+    <h3>Type conversion</h3>
+    <p>pour convertir d'un type à un autre, il suffit de préciser l'opérateur de conversion explicite.</p>
+    <pre>
+        $floatNum = 3.14;
+        $intNum = (int)$floatNum; // on obtient un entier
+    </pre>
+    <p>En plus, nous pouvons utiliser les fonctions php natives telles que 
+        <em>*intval()*, *floatval()*, *boolval()* ...</em>
+        <pre>
+            $floatNum = 3.14;
+            $intNum = intval($floatNum); // (int)3
+            $y = foatval(3); // (float)3.0
+        </pre>
+    </p>
+
+    <h2>Conditions</h2>
+    <p>Les conditions en PHP sont identiques au JS, et on y retrouve les mêmes opérateurs de comparaison tels que : <code><, <=, >, >=, !=, =, ==, !==</code></p>
+
+    <h1>PHP-FIG</h1>
+    <p>(PHP Framework Interop Group) est un groupe de travail ingormel composé de développeurs et de projets open source qui travaillent dans l'écosystème PHP.</p>
+    <p>L'objectif principal de PHP-FIG est de créer et de promouvoir des normes de codage et de conception communes pour les f rameworks et les bibliothèques PHP, afin de facilliter l'interopérzabilité entre différents projets.</p>
+    <p>En d'autres termes, PHP-FIG visse à étéblir des recommandations et des standards pour que  les différents projets PHP puissent fonctionner ensemble de manière harmonieuse.</p>
+    <p>Le groupe a produit plusieurs PSR (PHP Standard Recommandations) qui sont des documents décrivant les normes de codage et de conception pour différents aspects du dévelopement PHP, tels que l'autoloading des classes, les interfaces HTTP...</p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dévinette</title>
+</head>
+<body>
+    <script>
+        let Num = 10;
+        let nombre = Number(window.prompt("Dévinez le numéro juste"));
+
+        while(nombre > Num || nombre < Num ) {
+          
+            if (nombre > Num){
+                nombre = Number (window.prompt("vous aurez une chance de gagner si vous entrez un nombre inférieur à ce que vous vounez d'entrer"));
+            }
+
+            if( nombre < Num){
+                    nombre = Number (window.prompt("vous aurez une chance de gagner si vous entrez un nombre supérieur à ce que vous vounez d'entrer"));
+            }
+            
+            if(nombre = num){
+                nombre = window.prompt("Félicition vous avez gagné le gros lot")
+            }
+            
+        }
+
+   
+
+
+
+    </script>
+</body>
+</html>

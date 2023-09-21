@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+     function largestOfFour(arr){
+    let newArr = arr.slice() ;
+    let arraySmall = []
+
+    for (let i = 0; i < newArr.length; i++) {
+        let maxNumber = newArr[i][0];
+        for (let j = 0; j < newArr[i].length; j++) {
+            if (maxNumber < newArr[i][j]) {
+                maxNumber = newArr[i][j];
+            }
+        }
+        arraySmall.push(maxNumber)
+    }
+    return arraySmall;
+    }
+
+       
+    </script>
+</body>
+</html>

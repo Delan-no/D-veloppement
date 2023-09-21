@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chargement de VueJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.global.min.js" integrity="sha512-Wbf9QOX8TxnLykSrNGmAc5mDntbpyXjOw9zgnKql3DgQ7Iyr5TCSPWpvpwDuo+jikYoSNMD9tRRH854VfPpL9A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Utilisation de VueJS</title>
+</head>
+<body>
+    <!-- <div id="root"></div> -->
+    <div id="app">
+        <!-- Moustache "{{ }}" : marqueur utilisé pour interpoller du text
+        Interpoller: insérer ou introduire du texte qui n'existait au préalable -->
+        <h1>{{ msg }}</h1>
+        <h1>{{h}}</h1>
+
+        <button v-on:click.prevent="test">Afficher un message</button> <br> <br>
+
+        <input type="text" placeholder="Entrer du text" v-model="text">
+
+
+        <p>le champs du texte {{text}}</p>
+
+
+
+    </div>
+
+    <script>
+        // import { createApp } from "https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.esm-bundler.min.js";
+        // fonction qui permet de monter l'application
+        const { createApp } = Vue;
+        //on monte l'application Vue dans la div#app
+        /**
+         * Vue utilise des modèles (template) semblables au HTML ,mais fais usage "des états"
+         * Un état (en: state) est une variable qu'on utilise dans notre application (ou dans plus précisement dans le template)
+        */
+        createApp({
+            // liste d'options
+            data(){ // option "data"
+                return{
+                    // vos états(state)
+                    msg: "Welcome Délanno! 😎",
+                    h: "Rendez moi dynamique !",
+
+                    text :'',
+                    
+                }
+            },
+            methods: {
+                test() {
+                    alert("Hello !");
+                    
+                },
+
+              
+            }
+        }).mount("#app");
+
+
+    </script>
+</body>
+</html>

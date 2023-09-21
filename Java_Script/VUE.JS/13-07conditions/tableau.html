@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.esm-browser.min.js'
+     
+    createApp({
+      data() {
+        return {
+          
+          students: [
+            { id: 1 , fname: 'Kotcho', lname:"Délanno" },
+            { id: 2 , fname: 'Ahoumenou', lname:"Emile" },
+            { id: 3 , fname: 'Agbannonde', lname:"Warris" },
+           
+          ],
+
+          etu: [
+            {id :1 ,fname:"Keoula", lname:"Erféro"},
+            { id: 2 , fname: 'Ahoumenou', lname:"Emile" },
+            { id: 3 , fname: 'Agbannonde', lname:"Warris" },
+          ],
+
+          language: [
+            "HTML",
+            "CSS",
+            "JAVASCRIPT",
+            "PHP",
+            "PYTHON"
+          ]
+
+
+        };
+
+      },
+      methods: {
+ 
+      }
+    }).mount('#app')
+    </script>
+    
+    <div id="app">
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Noms</th>
+                    <th>Prénoms</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr v-for="student in students" :key="student.id">
+                    <td>{{ student.id }}</td>
+                    <td>{{ student.fname }}</td>
+                    <td>{{ student.lname }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ul>
+            <li v-for="a in etu" key="a.id"> {{a.id}} - {{ a.fname }} {{ a.lname }}</li>
+        </ul>
+
+        <H2>Liste des langages informatiques</H2>
+        <ul>
+            <li v-for="(lang, index) in language" :key="lang"> {{index}} {{ lang }}</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

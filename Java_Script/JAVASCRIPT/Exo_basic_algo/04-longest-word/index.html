@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest Word</title>
+</head>
+<body>
+    <script>
+        
+
+        function findLongestWordLength(str) {
+            let table = str.split(" ");
+            let longest = table[0].length;
+            for (let i = 0; i < table.length; i++) {
+
+                if (longest < table[i].length ) {
+                    longest = table[i].length;
+                }
+                
+            }
+            return longest;
+            }
+
+          console.log(findLongestWordLength(prompt("Entrez votre phrase pour en dégager le plus long mot")));
+    </script>
+</body>
+</html>
+
+
