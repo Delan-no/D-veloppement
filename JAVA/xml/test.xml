@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<note xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="file:///C:/Users/Délanno.Kotcho/Desktop/Highfive-Promo2/Développement/JAVA/nouv/test.xsd"
+>
+
+    <to> johndoe@gmail.com </to>
+    <from> highfive@gmail.com </from>
+    <heading> Invitation au concours d'entré </heading>
+    <body> Bonjour Mr. Vous êtes invité à vous présenter dans nos locaux. </body>
+    
+</note>

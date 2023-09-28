@@ -2,7 +2,7 @@
 
 class traitement{
 	
-	private string $message = "";
+	private string $gitmessage = "";
 	private string $login = "";
 	private string $pwd = "";
 	private string $bonLogin = "toto";
